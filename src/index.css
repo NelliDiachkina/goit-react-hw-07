@@ -1,0 +1,68 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  padding: 1rem;
+  color: #ffffffde;
+  background-color: #242424;
+
+  --main-color: #000000;
+  --background-color: #999999;
+  --color-red: #ec1212;
+  --color-focus: #ffd311;
+  --shadow: 0 0 5px #ffd7238b;
+  --animation: 0.4s ease-in-out;
+}
+
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.8em;
+  line-height: 1.1;
+  color: var(--color-focus);
+}
+
+button {
+  border-radius: 5px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-color);
+  cursor: pointer;
+  color: var(--main-color);
+  transition: border-color var(--animation), box-shadow var(--animation),
+    color var(--animation);
+}
+
+button:hover {
+  border-color: var(--color-focus);
+  box-shadow: var(--shadow);
+  color: var(--color-focus);
+}
+
+input {
+  outline: none;
+  padding: 8px;
+}
+
+input:focus {
+  border: 1px solid var(--color-focus);
+  box-shadow: var(--shadow);
+}
