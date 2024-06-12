@@ -58,8 +58,11 @@ button:hover {
 }
 
 input {
+  width: 100%;
   outline: none;
   padding: 8px;
+  border: 1px solid var(--background-color);
+  border-radius: 4px;
 }
 
 input:focus {
