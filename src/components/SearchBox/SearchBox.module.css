@@ -10,5 +10,8 @@
 .input {
   display: block;
   margin-top: 5px;
-  height: 32px;
+}
+
+.input:placeholder-shown {
+  font-style: italic;
 }

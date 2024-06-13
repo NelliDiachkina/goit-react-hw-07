@@ -13,6 +13,7 @@ export default function SearchBox() {
       <input
         type="text"
         id="search-inpt"
+        placeholder="Enter contact name ..."
         className={css.input}
         value={filter}
         onChange={e => dispatch(changeFilter(e.target.value))}
