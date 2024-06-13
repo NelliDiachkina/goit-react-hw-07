@@ -12,6 +12,13 @@
   --color-focus: #ffd311;
   --shadow: 0 0 5px #ffd7238b;
   --animation: 0.4s ease-in-out;
+  --gradient: linear-gradient(to right, #2c2c2c, #515151);
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  font-weight: 600;
 }
 
 ul,
@@ -44,17 +51,18 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: var(--background-color);
+  background-color: var(--color-focus);
   cursor: pointer;
   color: var(--main-color);
   transition: border-color var(--animation), box-shadow var(--animation),
-    color var(--animation);
+    color var(--animation), background-color var(--animation);
 }
 
 button:hover {
   border-color: var(--color-focus);
-  box-shadow: var(--shadow);
   color: var(--color-focus);
+  background-color: var(--main-color);
+  box-shadow: var(--shadow);
 }
 
 input {
@@ -67,5 +75,4 @@ input {
 
 input:focus {
   border: 1px solid var(--color-focus);
-  box-shadow: var(--shadow);
 }

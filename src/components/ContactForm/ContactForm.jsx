@@ -3,12 +3,10 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useId } from 'react';
 import * as Yup from 'yup';
 
-import { addContact } from '../../redux/contactsSlice';
-
+import { addContact } from '../../redux/contactsOps';
 import css from './ContactForm.module.css';
 
 const initialValues = {
-  id: '',
   name: '',
   number: '',
 };
@@ -20,19 +18,19 @@ const contactSchema = Yup.object().shape({
     .required('Required!'),
   number: Yup.string()
     .matches(
-      /^\d{3}-\d{3}-\d{2}-\d{2}$/,
-      'Invalid phone number! Please enter the number in the format XXX-XXX-XX-XX'
+      /^\d{3}-\d{3}-\d{4}$/,
+      'Invalid phone number! Please enter the number in the format XXX-XXX-XXXX'
     )
     .required('Required!'),
 });
 
-const ContactForm = () => {
+export default function ContactForm() {
   const dispatch = useDispatch();
   const nameFieldId = useId();
   const numberFieldId = useId();
 
   const handleSubmit = (values, actions) => {
-    dispatch(addContact({ ...values }));
+    dispatch(addContact(values));
     actions.resetForm();
   };
 
@@ -57,6 +55,4 @@ const ContactForm = () => {
       </Form>
     </Formik>
   );
-};
-
-export default ContactForm;
+}

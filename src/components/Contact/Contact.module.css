@@ -5,8 +5,9 @@
   gap: 20px;
   padding: 1rem;
   border: 1px solid currentColor;
-  border-radius: 5px;
+  border-radius: 8px;
   width: 100%;
+  background: var(--gradient);
 }
 
 .wrapper {
@@ -20,4 +21,10 @@
   align-items: first baseline;
   gap: 10px;
   font-weight: 500;
+}
+
+.link {
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }

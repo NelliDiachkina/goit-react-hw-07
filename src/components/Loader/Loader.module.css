@@ -1,0 +1,11 @@
+.wrapper {
+  margin: 0 auto;
+  max-width: 320px;
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0px;
+  color: var(--color-focus);
+}
